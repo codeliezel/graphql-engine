@@ -19,17 +19,22 @@ Introduction
 Table Involved
 ---------------
 
-Actions has a table managed by Hasura:
+Actions have a table managed by Hasura:
 
-- ``hdb_catalog.hdb_action_log``: This is the table that stores all captured logs.
+- ``hdb_catalog.hdb_action_log``: This is the table that stores all captured logs from asynchronous actions.
 
 
 
 Option 1: Get all logs
 ----------------------
 
-Option 2: Delete a single log
------------------------------
+.. code-block:: SQL
+   
+   SELECT * from hdb_catalog.hdb_action_log;
 
-Option 3: Delete all logs
--------------------------
+Option 5: Clear everything
+--------------------------
+
+.. code-block:: SQL
+   
+   DELETE from hdb_catalog.hdb_action_log;
